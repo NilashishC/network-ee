@@ -23,4 +23,4 @@ jobs:
       - name: Build and publish final image
         run: |
           ansible-builder build -f $GITHUB_WORKSPACE/execution-environment.yml -t ghcr.io/nilashishc/network-ee:latest -v3
-          podman push ghcr.io/nilashishc/ghcr.io/nilashishc/network-ee:latest
+          podman push ghcr.io/nilashishc/network-ee:latest
