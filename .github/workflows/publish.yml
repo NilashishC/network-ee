@@ -1,5 +1,11 @@
-name: publish
-on: [push]
+---
+name: Publish EE
+on:
+  push:
+    branches:
+      - 'main'
+  schedule:
+    - cron: '0 0 * * *'
 jobs:
   publish-image:
     permissions: write-all

@@ -8,9 +8,23 @@ images:
 dependencies:
   ansible_runner:
     package_pip: ansible-runner
+  
+  ansible_core:
+    package_pip: ansible-core
 
   galaxy: requirements.yml
       
   python: requirements.txt
 
   system: bindep.txt
+
+additional_build_steps:
+  prepend_base:
+    # community EE is not always updated to have the latest ansible-core
+    # remove the existing installation and do a fresh install
+    - RUN $PYCMD -m pip uninstall -y ansible-core
+    - RUN $PKGMGR -y install git
+  append_final:
+    # Helpful information to understand what got built
+    - RUN $PYCMD -m pip list
+    - RUN ansible-galaxy collection list
