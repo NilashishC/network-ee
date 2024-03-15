@@ -1,3 +1,4 @@
+[![Publish EE](https://github.com/NilashishC/network-ee/actions/workflows/publish.yml/badge.svg?branch=main&event=schedule)](https://github.com/NilashishC/network-ee/actions/workflows/publish.yml)
 # network-ee
 
 * A super unofficial take at building an Ansible Network specific upstream Execution Environment based on `community-minimal-ee`.
