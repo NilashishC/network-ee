@@ -24,3 +24,4 @@ collections:
     type: git
   - name: https://github.com/ansible-collections/vyos.vyos
     type: git
+  - name: community.general
